@@ -1,0 +1,54 @@
+body {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: grey;
+}
+
+.ict {
+	display: flex;
+}
+
+.ict .inner {
+	width: 500px;
+	height: 300px;
+	line-height: 300px;
+	font-size: 7em;
+	font-family: sans-serif;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow:hidden ;
+}
+
+.ict .inner:first-child {
+	background-color: green;
+	color: white;
+	transform-origin: right;
+	transform: perspective(100px) rotateY(-14deg);
+}
+
+.ict .inner:last-child {
+	background-color: whitesmoke;
+	color: blue;
+	transform-origin: left;
+	transform: perspective(100px) rotateY(14deg);
+}
+
+.ict .inner span {
+	position: absolute;
+	animation: marquee 5s linear infinite;
+}
+
+.ict .inner:first-child span {
+  animation-delay: 2.5s;
+	left: 100%;
+}
+@keyframes marquee {
+	from {
+		left: 100%;
+	}
+to {
+		left: -100%;
+	}
+}
